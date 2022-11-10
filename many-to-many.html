@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Biblioteca - Many To Many</title>
+</head>
+<body class="overflo">
+    <div class="p-10">
+        <div class="bg-gray-200 h-max w-full p-5 rounded-xl shadow-xl active:translate-y-5 cursor-pointer">
+            <div class="space-y-5">
+                <h3 class="text-xl fonte-extralight">Relacionamento Many To Many</h3>
+                <p>Explicação de formas de fazer o relacionamento many-to-many do Laravel.</p>
+                <p>A Primeira forma é: </p>
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="md:col-span-10 rounded-xl">
+                        <p class="">Podemos criar a model tool e a model employee, junto com as migrations. Na migrate de tool colocamos o id, name, created_at, updated_at.</p>
+                        <p class="">Na migrate de employee colocamos o id, nome, created_at, updated_at. Ainda na migrate de employee criamos outra tabela com o nome de tool_employeesn, essa tabela é conhecida como tabela pivot, para salvar nosso relacionamento.</p>
+                        <p>Nas models (tool e employee) criamos o relacionamento como belongsToMany tools chamando employee e employee chamando tool.</p>
+                        <p>Em relacionamentos com tabela pivot usamos attach, detach e sync para cadastrar os dados</p>
+                    </div>
+                    <div>
+                        Imagem
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
